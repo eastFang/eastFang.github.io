@@ -19,7 +19,7 @@ deploy:
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
   local-dir: ./docs/.vuepress/dist/ ## 根据情况自定义到静态文件输出目录
-  target-branch: gh-pages
+  target-branch: master
   verbose: true
   on:
     branch: master
