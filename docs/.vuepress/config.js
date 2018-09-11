@@ -14,6 +14,12 @@ module.exports = {
         children: [
           ['/js/reg', '正则']
         ]
+      },
+      {
+        title: 'discovery',
+        children: [
+          ['/discovery/canvas', 'canvas']
+        ]
       }
     ]
   }
