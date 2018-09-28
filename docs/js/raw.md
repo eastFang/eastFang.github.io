@@ -1,0 +1,44 @@
+懂其所以；不可以不求甚解
+-  Promise
+
+动手实现简易版的Promise后，[Promise是一个容器，包含着很多未来才会执行的事件]
+```javascript
+class MyPromise {
+  constructor(callback) {
+    // 处理返回成功的逻辑
+    let value = null
+    let isSuccess = null
+    const arr = []
+    this.then = (thenFn) => {
+      if (isSuccess === true) {
+        arr.push(thenFn(arr.length === 0 ? value : arr[arr.length - 1]))
+      }
+      return this
+    }
+    // 处理返回失败的逻辑
+    this.catch = (catchFn) => {
+      if (isSuccess === false) {
+        catchFn(value)
+      }
+      return this
+    }
+    function resolve(data) {
+      console.log(3443)
+      isSuccess = true
+      value = data
+    }
+    function reject(data) {
+      isSuccess = false
+      value = data
+    }
+    callback(resolve, reject)
+  }
+}
+```
+
+- prototype、__proto__
+```
+prototype: 实例共享的属性和方法
+__proto__只要是对象就有该属性；prototype函数独有；__proto__指向通过构造函数生成自身的构造函数的prototype
+construcotr 是 prototype的一个属性 指向构造函数本身
+```

@@ -12,13 +12,22 @@ module.exports = {
       {
         title: 'js',
         children: [
-          ['/js/reg', '正则']
+          ['/js/reg', '正则'],
+          ['/js/util', '工具'],
+          ['/js/arithmetic', '算法'],
+          ['/js/raw', '本质']
         ]
       },
       {
-        title: 'discovery',
+        title: '框架',
         children: [
-          ['/discovery/canvas', 'canvas']
+          ['/frame/react', 'react']
+        ]
+      },
+      {
+        title: '其他',
+        children: [
+          ['/discovery/canvas', 'canvas'],
         ]
       }
     ]
