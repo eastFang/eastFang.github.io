@@ -12,22 +12,24 @@ module.exports = {
       {
         title: 'js',
         children: [
-          ['/js/reg', '正则'],
-          ['/js/util', '工具'],
-          ['/js/arithmetic', '算法'],
-          ['/js/raw', '本质']
+          ['/js/正则', '正则'],
+          ['/js/工具', '工具'],
+          ['/js/算法', '算法'],
+          ['/js/源码', '源码']
         ]
       },
       {
         title: '框架',
         children: [
-          ['/frame/react', 'react']
+          ['/frame/react', 'react'],
+          ['/frame/react-native', 'react-native']
         ]
       },
       {
         title: '其他',
         children: [
           ['/discovery/canvas', 'canvas'],
+          ['/discovery/animation', 'animation']
         ]
       }
     ]
