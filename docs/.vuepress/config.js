@@ -22,7 +22,8 @@ module.exports = {
         title: '框架',
         children: [
           ['/frame/react', 'react'],
-          ['/frame/react-native', 'react-native']
+          ['/frame/react-native', 'react-native'],
+          ['/frame/vue', 'vue']
         ]
       },
       {
