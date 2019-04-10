@@ -10,10 +10,17 @@ module.exports = {
         ]
       },
       {
-        title: 'css',
+        title: 'html',
         children: [
+          ['/html/语义化', '语义化']
+        ]
+      },
+      {
+        title: 'css',
+        children: [ 
           ['/css/伪元素', '伪元素'],
-          ['/css/兼容性', '兼容性']
+          ['/css/兼容性', '兼容性'],
+          ['/css/flex布局', 'flex布局']
         ]
       },
       {
