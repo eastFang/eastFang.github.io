@@ -38,7 +38,8 @@ module.exports = {
         children: [
           ['/frame/react', 'react'],
           ['/frame/react-native', 'react-native'],
-          ['/frame/vue', 'vue']
+          ['/frame/vue', 'vue'],
+          ['/frame/node', 'node']
         ]
       },
       {
