@@ -5,6 +5,7 @@ module.exports = {
       {
         title: '工具',
         children: [
+          ['/tools/git-usage', 'git使用方法'],
           ['/tools/md-usage', 'markdown语法'],
           ['/tools/window-mac', 'windows和mac差异'],
         ]
