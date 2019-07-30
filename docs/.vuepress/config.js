@@ -36,12 +36,19 @@ module.exports = {
         ]
       },
       {
+        title: 'ts',
+        children: [
+          ['/ts/语法', '语法']
+        ]
+      },
+      {
         title: '框架',
         children: [
           ['/frame/react', 'react'],
           ['/frame/react-native', 'react-native'],
           ['/frame/vue', 'vue'],
-          ['/frame/node', 'node']
+          ['/frame/node', 'node'],
+          ['/frame/wxapp', 'wxapp']
         ]
       },
       {
