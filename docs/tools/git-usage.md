@@ -43,3 +43,13 @@ Git使用方法
     - git pull origin master // 先把别人push的pull下来
     - git push origin master // 再次push
   ```
+
+- 其他一些用法
+  ```
+    git show {commit-id} //  查看commit变动
+    git checkout {commit-id} 文件 // 回退具体文件到某个commit
+
+    git rebase -i {commit-id} (目标commit的上一个) // 删除某中间的commit 
+    drop 某个commit
+    git push -f
+  ```

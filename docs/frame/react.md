@@ -1,5 +1,3 @@
-最近在写【博客】的项目，技术栈是react + react-router + redux + react-redux + webpack，这篇写下期间用react的一些小心得
-
 ## 生命周期
 - 帮助我们更好的编写组件，优化性能
 

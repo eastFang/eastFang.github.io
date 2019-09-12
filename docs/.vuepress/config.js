@@ -32,7 +32,8 @@ module.exports = {
           ['/js/算法', '算法'],
           ['/js/源码', '源码'],
           ['/js/规范', '规范'],
-          ['/js/易错', '易错']
+          ['/js/易错', '易错'],
+          ['/js/API', 'API']
         ]
       },
       {
@@ -49,6 +50,12 @@ module.exports = {
           ['/frame/vue', 'vue'],
           ['/frame/node', 'node'],
           ['/frame/wxapp', 'wxapp']
+        ]
+      },
+      {
+        title: '服务端',
+        children: [
+          ['/server/nginx', 'nginx']
         ]
       },
       {
