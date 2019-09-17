@@ -49,7 +49,8 @@ module.exports = {
           ['/frame/react-native', 'react-native'],
           ['/frame/vue', 'vue'],
           ['/frame/node', 'node'],
-          ['/frame/wxapp', 'wxapp']
+          ['/frame/wxapp', 'wxapp'],
+          ['frame/cytoscape', 'cytoscape']
         ]
       },
       {
