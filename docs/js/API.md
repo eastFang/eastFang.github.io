@@ -7,3 +7,12 @@ offsetTop | 元素距离文档顶部的距离 | true
 offsetHeight | border + padding + content + 滚动条高度 | true
 clientHeight | content | true
 scrollHeight | 滚动元素的子元素的全部高度 | true
+
+- window
+```javascript
+  window.scrollTo({
+    left: 0,
+    top: 0,
+    behavior: 'smooth' // 平滑过渡效果
+  })
+```
