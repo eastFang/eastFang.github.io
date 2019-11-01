@@ -1,9 +1,19 @@
 {
   "devDependencies": {
+    "cz-conventional-changelog": "^3.0.2",
+    "validate-commit-msg": "^2.14.0",
     "vuepress": "^0.14.2"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    },
+    "ghooks": {
+      "commit-msg": "validate-commit-msg"
+    }
   }
 }
