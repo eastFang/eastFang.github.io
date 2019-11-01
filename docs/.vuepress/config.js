@@ -21,7 +21,8 @@ module.exports = {
         children: [ 
           ['/css/伪元素', '伪元素'],
           ['/css/兼容性', '兼容性'],
-          ['/css/flex布局', 'flex布局']
+          ['/css/flex布局', 'flex布局'],
+          ['/css/盒模型', '盒模型']
         ]
       },
       {
@@ -33,7 +34,8 @@ module.exports = {
           ['/js/源码', '源码'],
           ['/js/规范', '规范'],
           ['/js/易错', '易错'],
-          ['/js/API', 'API']
+          ['/js/API', 'API'],
+          ['/js/设计模式', '设计模式']
         ]
       },
       {
@@ -62,8 +64,7 @@ module.exports = {
       {
         title: '其他',
         children: [
-          ['/discovery/canvas', 'canvas'],
-          ['/discovery/animation', 'animation']
+          ['/discovery/canvas', 'canvas']
         ]
       }
     ]
