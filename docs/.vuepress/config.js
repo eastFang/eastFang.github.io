@@ -66,7 +66,8 @@ module.exports = {
       {
         title: '工具',
         children: [
-          ['/tools/git-more', 'git']
+          ['/tools/git-more', 'git'],
+          ['/tools/code-lint', 'lint']
         ]
       }
     ]
