@@ -1,3 +1,4 @@
+## 常用
 ### git log
 - git log --grep=${关键字} // 根据关键字过滤log信息
 :::tip
@@ -37,3 +38,15 @@ git revert -m 1 ${commitID}
 - 如果又需要把分支A再次合入，执行merge A是无法合入的，需要revert上一次revert产生的commit
 
 git revert ${revertCommitID}
+
+## git subtree
+- 某些模块（commonComp）需要被项目A和项目B或者更多项目公用, 开发过程中npm管理的方式会导致发包太频繁；可以在项目A和项目B中将commonComp以subtree的方式管理
+```javascript
+- cd A
+- git remote add ${commonComp的remote名} ${仓库地址}
+- git subtree add/pull/push --prefix=commonComp ${remote名} ${分支} --squash
+// 项目A中对commonComp进行改动，git subtree push
+// 项目B中需要用到A对于commonComp的改动，git subtree pull
+随着项目的开发，git subtree push会过滤越来越多的commit，可以用下面的命令，在最新的commit打一个标记（下次过滤的新起点）
+git subtree split --rejoin --prefix=commonComp --branch ${tagName}
+```
