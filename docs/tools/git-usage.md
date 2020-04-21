@@ -1,7 +1,3 @@
-Git使用方法
-
-这里拿具体项目来实践
-
 - Git安装:
   - [for windows](https://git-scm.com/download/win)
   - for mac 

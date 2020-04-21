@@ -13,7 +13,7 @@
   - npm publish --registry ${registry}
 
 
-官网
+<!-- 官网
 
 - 准备用html css js 往上堆，考虑到后面的维护成本，特别是css，开发过程写样式就特别痛苦
   - .page-index .banner-wrapper .banner
@@ -55,7 +55,7 @@
     - 生产环境服务器内存吃紧，webpack无法跑...
   - pm2 启动 node实例
     - 如果以后有并发问题，可以利用pm2启多个实例
-    - nginx
+    - nginx -->
 
   
   
