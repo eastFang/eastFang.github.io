@@ -83,3 +83,18 @@ A:
 - eslint-plugin-vue：集成了一些vue的校验规则
 - eslint-config-prettier：解决一些与prettier冲突的规则
 ```
+
+
+### 这里推荐下我自己的一个最佳实践
+```javascript
+"babel-eslint": "^8.2.1",
+"eslint": "6.1.0",
+"eslint-config-prettier": "^6.10.1",
+"eslint-friendly-formatter": "^4.0.1",
+"eslint-loader": "^4.0.0",
+"eslint-plugin-prettier": "^3.1.3",
+"eslint-plugin-vue": "^6.2.2",
+"prettier": "1.14.3",
+"husky": "^3.1.0",
+"lint-staged": "^10.1.3"
+```
