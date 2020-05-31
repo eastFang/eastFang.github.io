@@ -75,6 +75,12 @@ module.exports = {
         children: [
           ['/bottom/js-engine', 'js-engine']
         ]
+      },
+      {
+        title: '其他',
+        children: [
+          ['/others/wechat', 'wechat']
+        ]
       }
     ]
   },
