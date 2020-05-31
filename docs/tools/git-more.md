@@ -7,11 +7,30 @@
 如：开发了任务单167，commit信息为 feat: taskID 167完成
 
    修改了线上bug， fix: hotfixID 178
+
+   eg: git log --grep=taskID 167 // 可过滤出任务id167的所有提交
 :::
 
+### git cherry-pick
+- git cherry-pick {commit hash值} // 适用场景：分支A和分支B，分支A需要分支B的某一个commit提交的代码
+```bash
+a - b - c - d master
+      \
+        e - f - g feature
+```
+- git cherry-pick f
+```bash
+a - b - c - d - f master // f被添加
+      \
+        e - f - g feature
+```
+- git cherry-pick f g // 多个
+- git cherry-pick e..g // f g, 不包括e
+- git cherry-pick e^..g // e f g, 包括e
+
+
 ### git merge
-- git merge
-观察commit记录，会交叉混合，你可以想象一种场景：左右手各持一副牌，洗牌的场景，每张牌就是每条commit
+- 观察commit记录，会交叉混合，你可以想象一种场景：左右手各持一副牌，洗牌的场景，每张牌就是每条commit
 ![git-merge](~@images/tools/git-merge.jpg)
 
 ### 暂时抛弃某个commit

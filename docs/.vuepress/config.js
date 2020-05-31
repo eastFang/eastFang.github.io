@@ -69,6 +69,12 @@ module.exports = {
           ['/tools/git-more', 'git'],
           ['/tools/code-lint', 'lint']
         ]
+      },
+      {
+        title: '进阶',
+        children: [
+          ['/bottom/js-engine', 'js-engine']
+        ]
       }
     ]
   },
