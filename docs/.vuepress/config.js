@@ -73,7 +73,14 @@ module.exports = {
       {
         title: '进阶',
         children: [
-          ['/bottom/js-engine', 'js-engine']
+          ['/bottom/js-engine', 'js-engine'],
+          ['/bottom/vue', 'vue']
+        ]
+      },
+      {
+        title: 'igdl',
+        children: [
+          ['/igdl/bf', 'bf']
         ]
       },
       {
