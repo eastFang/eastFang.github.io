@@ -25,7 +25,8 @@ module.exports = {
       {
         title: '其他',
         children: [
-          ['/others/wechat', 'wechat']
+          ['/others/wechat', '微信分享'],
+          ['/others/videoFirstFrame', '获取视频第一帧']
         ]
       },
       {
