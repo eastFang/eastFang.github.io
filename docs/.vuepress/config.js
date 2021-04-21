@@ -23,6 +23,13 @@ module.exports = {
         ]
       },
       {
+        title: 'js',
+        children: [
+          ['/js/es6', 'es6'],
+          ['/js/js运行三部曲', 'js运行三部曲']
+        ]
+      },
+      {
         title: '其他',
         children: [
           ['/others/wechat', '微信分享'],
