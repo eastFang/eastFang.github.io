@@ -6,6 +6,8 @@
     "vuepress": "^0.14.2"
   },
   "scripts": {
+    "dev": "npm run docs:dev",
+    "build": "npm run docs:build",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },

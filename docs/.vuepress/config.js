@@ -13,7 +13,8 @@ module.exports = {
         title: '进阶',
         children: [
           ['/bottom/js-engine', 'js-engine'],
-          ['/bottom/vue', 'vue']
+          ['/bottom/vue', 'vue'],
+          ['/bottom/http', 'http']
         ]
       },
       {
