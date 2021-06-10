@@ -27,7 +27,8 @@ module.exports = {
         title: 'js',
         children: [
           ['/js/es6', 'es6'],
-          ['/js/js运行三部曲', 'js运行三部曲']
+          ['/js/js运行三部曲', 'js运行三部曲'],
+          ['/js/文件操作', '文件操作']
         ]
       },
       {
