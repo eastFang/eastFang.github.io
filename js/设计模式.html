@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>观察者模式 | bs的八度空间</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.cc2a2ebf.css" as="style"><link rel="preload" href="/assets/js/app.22f8cf49.js" as="script"><link rel="preload" href="/assets/js/31.ecd21f2d.js" as="script"><link rel="prefetch" href="/assets/js/2.4ce87602.js"><link rel="prefetch" href="/assets/js/3.243295ab.js"><link rel="prefetch" href="/assets/js/4.5c31863c.js"><link rel="prefetch" href="/assets/js/5.7b557ffc.js"><link rel="prefetch" href="/assets/js/6.e314558a.js"><link rel="prefetch" href="/assets/js/7.bb077c9c.js"><link rel="prefetch" href="/assets/js/8.4e4edb86.js"><link rel="prefetch" href="/assets/js/9.bd3ce43a.js"><link rel="prefetch" href="/assets/js/10.ab9bc1b0.js"><link rel="prefetch" href="/assets/js/11.17641f8e.js"><link rel="prefetch" href="/assets/js/12.7c10a6fc.js"><link rel="prefetch" href="/assets/js/13.8b00910d.js"><link rel="prefetch" href="/assets/js/14.e421cee4.js"><link rel="prefetch" href="/assets/js/15.e3c660c2.js"><link rel="prefetch" href="/assets/js/16.6b28734e.js"><link rel="prefetch" href="/assets/js/17.6245cacf.js"><link rel="prefetch" href="/assets/js/18.b89bae8a.js"><link rel="prefetch" href="/assets/js/19.bd491224.js"><link rel="prefetch" href="/assets/js/20.931cb646.js"><link rel="prefetch" href="/assets/js/21.f19f484f.js"><link rel="prefetch" href="/assets/js/22.f29f8df7.js"><link rel="prefetch" href="/assets/js/23.8ae792d9.js"><link rel="prefetch" href="/assets/js/24.8c17459f.js"><link rel="prefetch" href="/assets/js/25.5f547766.js"><link rel="prefetch" href="/assets/js/26.81aa8ef0.js"><link rel="prefetch" href="/assets/js/27.e54b0f78.js"><link rel="prefetch" href="/assets/js/28.cc4c5fd2.js"><link rel="prefetch" href="/assets/js/29.77d1a3df.js"><link rel="prefetch" href="/assets/js/30.70a245a2.js"><link rel="prefetch" href="/assets/js/32.30a97576.js"><link rel="prefetch" href="/assets/js/33.d33db7b9.js"><link rel="prefetch" href="/assets/js/34.32a55c36.js"><link rel="prefetch" href="/assets/js/35.2753f0cf.js"><link rel="prefetch" href="/assets/js/36.b251341c.js"><link rel="prefetch" href="/assets/js/37.e0bf65d0.js"><link rel="prefetch" href="/assets/js/38.46104966.js"><link rel="prefetch" href="/assets/js/39.aad85eb8.js"><link rel="prefetch" href="/assets/js/40.73b6cfe2.js"><link rel="prefetch" href="/assets/js/41.1c4be03a.js"><link rel="prefetch" href="/assets/js/42.abfa8ee0.js"><link rel="prefetch" href="/assets/js/43.f759a2b2.js"><link rel="prefetch" href="/assets/js/44.902c663e.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.cc2a2ebf.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">bs的八度空间</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><!---->  <ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading open"><span>工具</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/tools/git-more.html" class="sidebar-link">git</a></li><li><a href="/tools/code-lint.html" class="sidebar-link">lint</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>进阶</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>igdl</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>js</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>其他</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>vue</span> <span class="arrow right"></span></p> <!----></div></li></ul> </div> <div class="page"> <div class="content"><h3 id="观察者模式"><a href="#观察者模式" aria-hidden="true" class="header-anchor">#</a> 观察者模式</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">Subject</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>observers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">add</span><span class="token punctuation">(</span>observer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>observers<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>observer<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">notify</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">// 没有事件通道通知给观察者</span>
+    <span class="token comment">// 与Observer代码耦合</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>observers<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>observer <span class="token operator">=&gt;</span> observer<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">remove</span><span class="token punctuation">(</span>observer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>observers <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>observers<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>it <span class="token operator">=&gt;</span> it <span class="token operator">!==</span> observer<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Observer</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name
+  <span class="token punctuation">}</span>
+  <span class="token function">update</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> observer1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Observer</span><span class="token punctuation">(</span><span class="token string">'观察者1'</span><span class="token punctuation">)</span> <span class="token comment">// 创建观察者1</span>
+<span class="token keyword">const</span> observer2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Observer</span><span class="token punctuation">(</span><span class="token string">'观察者1'</span><span class="token punctuation">)</span> <span class="token comment">// 创建观察者2</span>
+<span class="token keyword">const</span> sub <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Subject</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 创建发布者</span>
+sub<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>observer1<span class="token punctuation">)</span> <span class="token comment">// 添加观察者1</span>
+sub<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>observer2<span class="token punctuation">)</span> <span class="token comment">// 添加观察者2</span>
+sub<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>observer2<span class="token punctuation">)</span>
+sub<span class="token punctuation">.</span><span class="token function">notify</span><span class="token punctuation">(</span><span class="token string">'你好'</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="订阅-发布模式"><a href="#订阅-发布模式" aria-hidden="true" class="header-anchor">#</a> 订阅/发布模式</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 事件调度中心. 有事件通道</span>
+<span class="token keyword">class</span> <span class="token class-name">PubsubEvent</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>subscribers <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token comment">// { [String]: [Function, ...] }</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">subscribe</span><span class="token punctuation">(</span>topic<span class="token punctuation">,</span> fn<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 订阅</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>subscribers<span class="token punctuation">[</span>topic<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>subscribers<span class="token punctuation">[</span>topic<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>subscribers<span class="token punctuation">[</span>topic<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>fn<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">publish</span><span class="token punctuation">(</span>topic<span class="token punctuation">,</span> <span class="token operator">...</span>args<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 发布</span>
+    <span class="token keyword">const</span> fns <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>subscribers<span class="token punctuation">[</span>topic<span class="token punctuation">]</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>fns<span class="token punctuation">)</span> <span class="token keyword">return</span>
+    fns<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>fn <span class="token operator">=&gt;</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">remove</span><span class="token punctuation">(</span>topic<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 取消订阅</span>
+    <span class="token keyword">delete</span> <span class="token keyword">this</span><span class="token punctuation">.</span>subscribers<span class="token punctuation">[</span>topic<span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> pubsub <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PubsubEvent</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+pubsub<span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token string">'订阅1'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+pubsub<span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token string">'订阅2'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+pubsub<span class="token punctuation">.</span><span class="token function">publish</span><span class="token punctuation">(</span><span class="token string">'订阅1'</span><span class="token punctuation">,</span> <span class="token string">'你好yayayay'</span><span class="token punctuation">)</span>
+pubsub<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token string">'订阅1'</span><span class="token punctuation">)</span>
+pubsub<span class="token punctuation">.</span><span class="token function">publish</span><span class="token punctuation">(</span><span class="token string">'订阅1'</span><span class="token punctuation">,</span> <span class="token string">'你好yayayay'</span><span class="token punctuation">)</span>
+</code></pre></div></div> <div class="page-edit"><!----> <!----></div> <!----> </div> <!----></div></div>
+    <script src="/assets/js/31.ecd21f2d.js" defer></script><script src="/assets/js/app.22f8cf49.js" defer></script>
+  </body>
+</html>

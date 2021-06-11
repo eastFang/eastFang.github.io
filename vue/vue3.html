@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vue3的几个特性 | bs的八度空间</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.cc2a2ebf.css" as="style"><link rel="preload" href="/assets/js/app.22f8cf49.js" as="script"><link rel="preload" href="/assets/js/42.abfa8ee0.js" as="script"><link rel="prefetch" href="/assets/js/2.4ce87602.js"><link rel="prefetch" href="/assets/js/3.243295ab.js"><link rel="prefetch" href="/assets/js/4.5c31863c.js"><link rel="prefetch" href="/assets/js/5.7b557ffc.js"><link rel="prefetch" href="/assets/js/6.e314558a.js"><link rel="prefetch" href="/assets/js/7.bb077c9c.js"><link rel="prefetch" href="/assets/js/8.4e4edb86.js"><link rel="prefetch" href="/assets/js/9.bd3ce43a.js"><link rel="prefetch" href="/assets/js/10.ab9bc1b0.js"><link rel="prefetch" href="/assets/js/11.17641f8e.js"><link rel="prefetch" href="/assets/js/12.7c10a6fc.js"><link rel="prefetch" href="/assets/js/13.8b00910d.js"><link rel="prefetch" href="/assets/js/14.e421cee4.js"><link rel="prefetch" href="/assets/js/15.e3c660c2.js"><link rel="prefetch" href="/assets/js/16.6b28734e.js"><link rel="prefetch" href="/assets/js/17.6245cacf.js"><link rel="prefetch" href="/assets/js/18.b89bae8a.js"><link rel="prefetch" href="/assets/js/19.bd491224.js"><link rel="prefetch" href="/assets/js/20.931cb646.js"><link rel="prefetch" href="/assets/js/21.f19f484f.js"><link rel="prefetch" href="/assets/js/22.f29f8df7.js"><link rel="prefetch" href="/assets/js/23.8ae792d9.js"><link rel="prefetch" href="/assets/js/24.8c17459f.js"><link rel="prefetch" href="/assets/js/25.5f547766.js"><link rel="prefetch" href="/assets/js/26.81aa8ef0.js"><link rel="prefetch" href="/assets/js/27.e54b0f78.js"><link rel="prefetch" href="/assets/js/28.cc4c5fd2.js"><link rel="prefetch" href="/assets/js/29.77d1a3df.js"><link rel="prefetch" href="/assets/js/30.70a245a2.js"><link rel="prefetch" href="/assets/js/31.ecd21f2d.js"><link rel="prefetch" href="/assets/js/32.30a97576.js"><link rel="prefetch" href="/assets/js/33.d33db7b9.js"><link rel="prefetch" href="/assets/js/34.32a55c36.js"><link rel="prefetch" href="/assets/js/35.2753f0cf.js"><link rel="prefetch" href="/assets/js/36.b251341c.js"><link rel="prefetch" href="/assets/js/37.e0bf65d0.js"><link rel="prefetch" href="/assets/js/38.46104966.js"><link rel="prefetch" href="/assets/js/39.aad85eb8.js"><link rel="prefetch" href="/assets/js/40.73b6cfe2.js"><link rel="prefetch" href="/assets/js/41.1c4be03a.js"><link rel="prefetch" href="/assets/js/43.f759a2b2.js"><link rel="prefetch" href="/assets/js/44.902c663e.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.cc2a2ebf.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">bs的八度空间</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><!---->  <ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading"><span>工具</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>进阶</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>igdl</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>js</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>其他</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>vue</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/vue/vue3.html" class="active sidebar-link">vue3</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vue/vue3.html#vue3的几个特性" class="sidebar-link">vue3的几个特性</a></li></ul></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h2 id="vue3的几个特性"><a href="#vue3的几个特性" aria-hidden="true" class="header-anchor">#</a> vue3的几个特性</h2> <h3 id="teleport"><a href="#teleport" aria-hidden="true" class="header-anchor">#</a> teleport</h3> <ul><li><a href="https://vue3js.cn/docs/zh/guide/teleport.html" target="_blank" rel="noopener noreferrer">用法详细参考<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 有点类似React的createPortal，指定位置渲染dom，比较适合弹出层的情况，如modal、dropdown等</span>
+
+<span class="token comment">// 这里简单介绍下</span>
+<span class="token operator">&lt;</span>teleport to<span class="token operator">=</span><span class="token string">&quot;body&quot;</span><span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+    <span class="token function">我是弹出层内容，teleport包裹的内容将全部在指定dom下展示</span><span class="token punctuation">(</span>这里是body<span class="token punctuation">)</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>teleport<span class="token operator">&gt;</span>
+</code></pre></div><h3 id="setup"><a href="#setup" aria-hidden="true" class="header-anchor">#</a> setup</h3> <ul><li>聚合逻辑关注点</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> fetchUserList<span class="token punctuation">,</span> fetchCustomerList <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/api/user'</span>
+<span class="token comment">// vue2.x，用1 2表示是不同的业务逻辑部分，随着业务的不断迭代，阅读代码的时候，会出现跳来跳去的情况</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      userList<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// 1</span>
+      customerList<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// 2</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token keyword">async</span> <span class="token function">setUserList</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 1</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>userList <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetchUserList</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token keyword">async</span> <span class="token function">setCustomerList</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 2</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>fetchCustomerList <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetchCustomerList</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setUserList</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 1</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setCustomerList</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 2</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/************************************我是一条合格的分界线************************************/</span>
+<span class="token comment">// vue3.x</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ref<span class="token punctuation">,</span> onMounted <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> userList <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// ref包裹使之响应式</span>
+    <span class="token keyword">const</span> setUserList <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      userList<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetchUserList</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">onMounted</span><span class="token punctuation">(</span>setUserList<span class="token punctuation">)</span>
+
+    <span class="token keyword">let</span> customerList <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> setCustomerList <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      customerList<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetchCustomerList</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">onMounted</span><span class="token punctuation">(</span>customerList<span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      userList<span class="token punctuation">,</span>
+      setUserList<span class="token punctuation">,</span>
+
+      customerList<span class="token punctuation">,</span>
+      setCustomerList
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/************************************我是一条合格的分界线************************************/</span>
+<span class="token comment">// 随着业务模块的更迭，setup函数会变得越来越臃肿，显然这不是我们想看到的结果</span>
+<span class="token comment">// 我们可以把逻辑独立出去</span>
+<span class="token comment">// ./composables/useUserList.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> userList <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// ref包裹使之响应式</span>
+  <span class="token keyword">const</span> setUserList <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    userList<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetchUserList</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">onMounted</span><span class="token punctuation">(</span>setUserList<span class="token punctuation">)</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    userList<span class="token punctuation">,</span>
+    setUserList
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// ./composables/useCustomerList.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> customerList <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// ref包裹使之响应式</span>
+  <span class="token keyword">const</span> setCustomerList <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    customerList<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetchCustomerList</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">onMounted</span><span class="token punctuation">(</span>setCustomerList<span class="token punctuation">)</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    customerList<span class="token punctuation">,</span>
+    setCustomerList
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 最终整理后的代码</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> userList <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useUserList</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 1</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> customerList <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useCustomerList</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 2</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      userList<span class="token punctuation">,</span>
+      customerList
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/************************************我是一条合格的分界线************************************/</span>
+<span class="token comment">// setup 可以返回一个渲染函数，不论template定义了什么，都会渲染这个渲染函数返回的vnode</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">h</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">,</span> <span class="token string">'我是第一优先级的'</span><span class="token punctuation">)</span> <span class="token comment">// 最终会渲染这个</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/************************************我是一条合格的分界线************************************/</span>
+<span class="token comment">// setup中拿到ref</span>
+<span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>div ref<span class="token operator">=</span><span class="token string">&quot;root&quot;</span><span class="token operator">&gt;</span>我是根组件<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+  <span class="token comment">// 这里的ref前面要加冒号</span>
+  <span class="token operator">&lt;</span>div v<span class="token operator">-</span><span class="token keyword">for</span><span class="token operator">=</span><span class="token string">&quot;(item, idx) in list&quot;</span> ref<span class="token operator">=</span><span class="token string">&quot;e =&gt; roots[idx] = e&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> root <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> roots <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token function">onMounted</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>root<span class="token punctuation">.</span>value<span class="token punctuation">)</span> <span class="token comment">// &lt;div&gt;我是根组件&lt;/div&gt;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      root<span class="token punctuation">,</span>
+      roots
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/others/videoFirstFrame.html" class="prev">
+          获取视频第一帧
+        </a></span> <!----></p></div> </div> <!----></div></div>
+    <script src="/assets/js/42.abfa8ee0.js" defer></script><script src="/assets/js/app.22f8cf49.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>性能优化比较大，这里单开一个章节来看 | bs的八度空间</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.cc2a2ebf.css" as="style"><link rel="preload" href="/assets/js/app.22f8cf49.js" as="script"><link rel="preload" href="/assets/js/44.902c663e.js" as="script"><link rel="prefetch" href="/assets/js/2.4ce87602.js"><link rel="prefetch" href="/assets/js/3.243295ab.js"><link rel="prefetch" href="/assets/js/4.5c31863c.js"><link rel="prefetch" href="/assets/js/5.7b557ffc.js"><link rel="prefetch" href="/assets/js/6.e314558a.js"><link rel="prefetch" href="/assets/js/7.bb077c9c.js"><link rel="prefetch" href="/assets/js/8.4e4edb86.js"><link rel="prefetch" href="/assets/js/9.bd3ce43a.js"><link rel="prefetch" href="/assets/js/10.ab9bc1b0.js"><link rel="prefetch" href="/assets/js/11.17641f8e.js"><link rel="prefetch" href="/assets/js/12.7c10a6fc.js"><link rel="prefetch" href="/assets/js/13.8b00910d.js"><link rel="prefetch" href="/assets/js/14.e421cee4.js"><link rel="prefetch" href="/assets/js/15.e3c660c2.js"><link rel="prefetch" href="/assets/js/16.6b28734e.js"><link rel="prefetch" href="/assets/js/17.6245cacf.js"><link rel="prefetch" href="/assets/js/18.b89bae8a.js"><link rel="prefetch" href="/assets/js/19.bd491224.js"><link rel="prefetch" href="/assets/js/20.931cb646.js"><link rel="prefetch" href="/assets/js/21.f19f484f.js"><link rel="prefetch" href="/assets/js/22.f29f8df7.js"><link rel="prefetch" href="/assets/js/23.8ae792d9.js"><link rel="prefetch" href="/assets/js/24.8c17459f.js"><link rel="prefetch" href="/assets/js/25.5f547766.js"><link rel="prefetch" href="/assets/js/26.81aa8ef0.js"><link rel="prefetch" href="/assets/js/27.e54b0f78.js"><link rel="prefetch" href="/assets/js/28.cc4c5fd2.js"><link rel="prefetch" href="/assets/js/29.77d1a3df.js"><link rel="prefetch" href="/assets/js/30.70a245a2.js"><link rel="prefetch" href="/assets/js/31.ecd21f2d.js"><link rel="prefetch" href="/assets/js/32.30a97576.js"><link rel="prefetch" href="/assets/js/33.d33db7b9.js"><link rel="prefetch" href="/assets/js/34.32a55c36.js"><link rel="prefetch" href="/assets/js/35.2753f0cf.js"><link rel="prefetch" href="/assets/js/36.b251341c.js"><link rel="prefetch" href="/assets/js/37.e0bf65d0.js"><link rel="prefetch" href="/assets/js/38.46104966.js"><link rel="prefetch" href="/assets/js/39.aad85eb8.js"><link rel="prefetch" href="/assets/js/40.73b6cfe2.js"><link rel="prefetch" href="/assets/js/41.1c4be03a.js"><link rel="prefetch" href="/assets/js/42.abfa8ee0.js"><link rel="prefetch" href="/assets/js/43.f759a2b2.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.cc2a2ebf.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">bs的八度空间</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><!---->  <ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading open"><span>工具</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/tools/git-more.html" class="sidebar-link">git</a></li><li><a href="/tools/code-lint.html" class="sidebar-link">lint</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>进阶</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>igdl</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>js</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>其他</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>vue</span> <span class="arrow right"></span></p> <!----></div></li></ul> </div> <div class="page"> <div class="content"><h2 id="性能优化比较大，这里单开一个章节来看"><a href="#性能优化比较大，这里单开一个章节来看" aria-hidden="true" class="header-anchor">#</a> 性能优化比较大，这里单开一个章节来看</h2> <h3 id="webpack打包优化"><a href="#webpack打包优化" aria-hidden="true" class="header-anchor">#</a> webpack打包优化</h3> <ul><li><p>DllPlugin &amp;&amp; DllReferencePlugin</p> <ul><li>借鉴了windows系统的动态链接库dll的思想</li> <li>将第三方库单独打包成一个文件，这个文件就是一个单纯的依赖库，不会跟着业务代码一起打包，只有当依赖自身版本变化时需要单独打包</li></ul></li> <li><p>DllPlugin</p> <ul><li>项目额外配置webpack.dll.config.js</li></ul></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 这里贴下最简单的配置</span>
+<span class="token keyword">const</span> webpack <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'webpack'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  entry<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    vendor<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token string">'dayjs'</span><span class="token punctuation">,</span>
+      <span class="token string">'lodash'</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    path<span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'..'</span><span class="token punctuation">,</span> <span class="token string">'dist'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    filename<span class="token punctuation">:</span> <span class="token string">'[name].dll.js'</span><span class="token punctuation">,</span> <span class="token comment">// 会生成vendor.dll.js文件</span>
+    library<span class="token punctuation">:</span> <span class="token string">'[name]_dll'</span> <span class="token comment">// 暴露vendor_dll变量</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token comment">// 更多详细配置参考: https://webpack.docschina.org/plugins/dll-plugin/#root</span>
+    <span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>DllPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      path<span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'manifest.json'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">// 生成的manifest.json路径，给DllReferencePlugin使用，业务代码使用第三方库的映射文件</span>
+      name<span class="token punctuation">:</span> <span class="token string">'[name]_dll'</span> <span class="token comment">// 对外暴露的第三方库引入函数</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 生成的manifest.json</span>
+<span class="token punctuation">{</span>
+  <span class="token string">&quot;name&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;vendor_dll&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;content&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;./node_modules/dayjs/dayjs.min.js&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;id&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;./node_modules/dayjs/dayjs.min.js&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;buildMeta&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;providedExports&quot;</span><span class="token punctuation">:</span> <span class="token boolean">true</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;./node_modules/lodash/lodash.js&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;id&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;./node_modules/lodash/lodash.js&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;buildMeta&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;providedExports&quot;</span><span class="token punctuation">:</span> <span class="token boolean">true</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 生成的vendor.dll.js文件, 需要在index.html引入该js</span>
+<span class="token keyword">var</span> vendor_dll <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>modules<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">__webpack_require__</span><span class="token punctuation">(</span>__webpack_require__<span class="token punctuation">.</span>s <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token string">&quot;./node_modules/dayjs/dayjs.min.js&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 。。。</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><ul><li>DllReferencePlugin
+<ul><li>webpack.config.js</li></ul></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> webpack <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'webpack'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  entry<span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'..'</span><span class="token punctuation">,</span> <span class="token string">'src/index.js'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+
+  output<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    path<span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'..'</span><span class="token punctuation">,</span> <span class="token string">'dist'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    filename<span class="token punctuation">:</span> <span class="token string">'main.js'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token comment">// 更多配置参考：https://webpack.docschina.org/plugins/dll-plugin/#root</span>
+    <span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>DllReferencePlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      manifest<span class="token punctuation">:</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./manifest.json'</span><span class="token punctuation">)</span> <span class="token comment">// 上一步生成的manifest.json</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 贴一下打包后main.js代码的片段</span>
+<span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>modules<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 省略</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token string">&quot;./src/index.js&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>module<span class="token punctuation">,</span> __webpack_exports__<span class="token punctuation">,</span> __webpack_require__<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">eval</span><span class="token punctuation">(</span><span class="token string">&quot;var dayjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! dayjs */ \&quot;./node_modules/dayjs/dayjs.min.js\&quot;)&quot;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;./node_modules/dayjs/dayjs.min.js&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>module<span class="token punctuation">,</span> exports<span class="token punctuation">,</span> __webpack_require__<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 获取dayjs的方式发生改变：从dll-reference vendor_dll获取</span>
+    <span class="token function">eval</span><span class="token punctuation">(</span><span class="token string">&quot;moudle.exports = (__webpack_require__('dll-reference vendor_dll))('./node_modules/dayjs/dayjs.min.js')&quot;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;dll-reference vendor_dll&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>module<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">eval</span><span class="token punctuation">(</span><span class="token string">&quot;module.exports = vendor_dll&quot;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><ul><li>总结</li></ul> <ol><li>DllPlugin将第三方库打包成一个文件(vendor.dll.js) 并暴露vendor_dll全局变量 和 manifest.json（库映射文件）</li> <li>var vendor_dll = <strong>webpack_require</strong>(moduleId) {}</li> <li>业务代码引用第三方库时，调用vendor_dll函数获取库代码</li></ol> <h3 id="图片"><a href="#图片" aria-hidden="true" class="header-anchor">#</a> 图片</h3> <ul><li><p>JPG/JPEG</p> <ul><li>特点：有损压缩、不支持透明</li> <li>适用场景：体积较大的图片用JPG/JPEG格式，在体积压缩能够减少到原来的50%的情况下，能够保证60%左右的图片质量是非常划算的</li></ul></li> <li><p>PNG-8/PNG-24</p> <ul><li>特点：无损压缩、支持透明、体积大</li> <li>8和24分别指的是二进制的位数,支持的颜色种类：PNG-8(256个)，PNG-24(1600多万个)</li></ul></li> <li><p>SVG</p> <ul><li>特点：不失真、体积小、文本文件、兼容性好</li></ul></li> <li><p>base64</p> <ul><li>特点</li> <li>适用场景</li></ul></li> <li><p>webp</p> <ul><li>特点</li> <li>适用场景</li></ul></li></ul></div> <div class="page-edit"><!----> <!----></div> <!----> </div> <!----></div></div>
+    <script src="/assets/js/44.902c663e.js" defer></script><script src="/assets/js/app.22f8cf49.js" defer></script>
+  </body>
+</html>
